@@ -1,14 +1,14 @@
 <template>
   <div class="icons">
-    <swiper>
-       <swiper-slide v-for="(page,index) of pages" :key="index">
-         <div class="icon" v-for="item of page" :key="item.id">
-           <div class="icon-img">
-             <img class="icon-img-content " :src=item.imgUrl>
-           </div>
-           <p class="icon-desc">{{item.desc}}</p>
-         </div>
-       </swiper-slide>
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="(page, index) of pages" :key="index">
+        <div class="icon" v-for="item of page" :key="item.id">
+          <div class='icon-img'>
+            <img class='icon-img-content' :src='item.imgUrl' />
+          </div>
+          <p class="icon-desc">{{item.desc}}</p>
+        </div>
+      </swiper-slide>
     </swiper>
   </div>
 </template>
@@ -19,8 +19,7 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
+        autoplay: false
       },
       iconList: [
         {id: '0001', imgUrl: '//gw.alicdn.com/tfs/TB1lw9HfgoQMeJjy0FpXXcTxpXa-225-183.png', desc: '机票'},
@@ -58,33 +57,35 @@ export default {
   .icons>>>.swiper-container
     height 0
     padding-bottom 50%
-  .icon
-    overflow hidden
-    width 25%
-    height 0
-    padding-bottom 25%
-    float left
-    position relative
-    .icon-img
-      position absolute
-      top 0
-      left 0
-      right 0
-      buttom .44rem
-      box-sizing border-box
-      padding .1rem
-      .icon-img-content
-        display block
-        width 100%
-        margin 0 auto
-    .icon-desc
-      position absolute
-      left 0
-      right 0
-      bottom 0
-      height .44rem
-      line-height .44rem
-      text-align center
-      color $darkTextColor
-      ellipsis()
+  .icons
+    margin-top -.08rem
+    .icon
+      overflow hidden
+      width 25%
+      height 0
+      padding-bottom 25%
+      float left
+      position relative
+      .icon-img
+        position absolute
+        top 0
+        left 0
+        right 0
+        buttom .44rem
+        box-sizing border-box
+        padding .1rem
+        .icon-img-content
+          display block
+          width 100%
+          margin 0 auto
+      .icon-desc
+        position absolute
+        left 0
+        right 0
+        bottom 0
+        height .44rem
+        line-height .44rem
+        text-align center
+        color $darkTextColor
+        ellipsis()
 </style>

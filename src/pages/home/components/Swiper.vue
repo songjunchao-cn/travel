@@ -17,7 +17,7 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
-        autoplay: false
+        autoplay: 4000
       },
       swiperList: [
         {id: '0001', imgUrl: '//gw.alicdn.com/tfs/TB1DHRKzTJYBeNjy1zeXXahzVXa-1125-352.jpg_960x960q90.jpg'},
