@@ -16,12 +16,13 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: false
       },
       swiperList: [
-        {id: '0001', imgUrl: '//dimg04.c-ctrip.com/images/70080t000000ihxn3875C_640_128_25.jpg'},
-        {id: '0002', imgUrl: '//dimg04.c-ctrip.com/images/700w0s000000i09wz3A67_640_128_25.jpg'},
-        {id: '0003', imgUrl: '//dimg04.c-ctrip.com/images/700i0s000000hwmms3385_640_128_25.jpg'}
+        {id: '0001', imgUrl: '//gw.alicdn.com/tfs/TB1DHRKzTJYBeNjy1zeXXahzVXa-1125-352.jpg_960x960q90.jpg'},
+        {id: '0002', imgUrl: '//gw.alicdn.com/tfs/TB1trLczAyWBuNjy0FpXXassXXa-1125-352.jpg_960x960q90.jpg'},
+        {id: '0003', imgUrl: '//gw.alicdn.com/tfs/TB17ZVdyWmWBuNjy1XaXXXCbXXa-1125-352.jpg_960x960q90.jpg'}
       ]
     }
   }
