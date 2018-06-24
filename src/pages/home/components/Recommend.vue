@@ -34,7 +34,7 @@ export default {
         id: '0003',
         imgUrl: '//gw.alicdn.com/bao/uploaded/i2/1911996186/TB2_u7VdmMmBKNjSZTEXXasKpXa_!!1911996186.jpg_400x400q75.jpg',
         title: '大阪 | 自由行',
-        desc: '杭州上海直飞日本大阪 5/6天自由行往返特价机票五星酒店京都旅游     '
+        desc: '杭州上海直飞日本大阪 5/6天自由行往返特价机票五星酒店京都旅游'
       }]
     }
   }
