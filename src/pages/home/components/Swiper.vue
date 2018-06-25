@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <swiper-slide v-for= "item of swiperList" :key="item.id">
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
@@ -12,18 +12,21 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
         autoplay: 4000
-      },
-      swiperList: [
-        {id: '0001', imgUrl: '//gw.alicdn.com/tfs/TB1DHRKzTJYBeNjy1zeXXahzVXa-1125-352.jpg_960x960q90.jpg'},
-        {id: '0002', imgUrl: '//gw.alicdn.com/tfs/TB1trLczAyWBuNjy0FpXXassXXa-1125-352.jpg_960x960q90.jpg'},
-        {id: '0003', imgUrl: '//gw.alicdn.com/tfs/TB17ZVdyWmWBuNjy1XaXXXCbXXa-1125-352.jpg_960x960q90.jpg'}
-      ]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.swiperList.length
     }
   }
 }
