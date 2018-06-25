@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item" border-bottom v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
         <img class="item-img" :src=item.imgUrl>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -32,10 +32,13 @@ export default {
   .item
     display flex
     overflow hidden
-    height 1.9rem
+    height 2.3rem
+  .border-bottom
+    &:before
+      border-color #666
     .item-img
-      width 1.8rem
-      height 1.8rem
+      width 2rem
+      height 2rem
       padding .1rem
     .item-info
       flex 1
@@ -46,7 +49,7 @@ export default {
         font-size .3rem
         ellipsis()
       .item-desc
-        margin-top .1rem
+        margin-top .05rem
         line-height .44rem
         color #ccc
         font-size .2rem
@@ -54,7 +57,7 @@ export default {
       .item-button
         font-size .25rem
         line-height .44 rem
-        margin-top .16rem
+        margin-top .1rem
         background rgba(0,0,0,.6)
         padding 0 .2rem
         border-radius .06rem

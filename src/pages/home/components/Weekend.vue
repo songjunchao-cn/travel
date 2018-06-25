@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪</div>
     <ul>
-      <li class="item" border-bottom v-for="item of weekendList" :key="item.id">
+      <li class="item border-bottom"  v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src=item.imgUrl>
         </div>
@@ -30,8 +30,10 @@ export default {
     line-height .8rem
     background  #eee
     text-indent .2rem
-  .item
-    background white
+  .border-bottom
+    margin-bottom .01rem
+    &:before
+      border-color #666
     .item-img-wrapper
       overflow hidden
       height 0
