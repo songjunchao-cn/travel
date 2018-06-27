@@ -13,29 +13,32 @@
 export default {
   name: 'Header',
   data () {
-    return{
+    return {
       showAbs: true,
       opacityStyle: {
-        opacity: 0    
+        opacity: 0
       }
     }
   },
   methods: {
     handleScroll () {
-    const top = document.documentElement.scrollTop
-    if (top > 30){
-      let opacity = top / 140
-      opacity = opacity >1 ? 1:opacity
-      this.opacityStyle = { opacity }
-      this.showAbs = false
-    }
-    else {
-      this.showAbs = true    
-    }  
+      const top = document.documentElement.scrollTop
+      if (top > 30) {
+        let opacity = top / 140
+        opacity = opacity > 1 ? 1 : opacity
+        this.opacityStyle = { opacity }
+        this.showAbs = false
+        console.log(scroll)
+      } else {
+        this.showAbs = true
+      }
     }
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
