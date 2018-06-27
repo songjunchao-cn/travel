@@ -23,7 +23,7 @@ export default {
   methods: {
     handleScroll () {
       const top = document.documentElement.scrollTop
-      if (top > 30) {
+      if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
@@ -70,6 +70,7 @@ export default {
     color #fff
     background $bgColor
     font-size .32rem
+    z-index 2
     .header-back
       width .64rem
       text-align center
