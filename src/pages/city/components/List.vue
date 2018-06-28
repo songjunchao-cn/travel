@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import BScroll from 'better-scroll'
+import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'List',
@@ -56,7 +56,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -89,6 +89,7 @@ export default {
        padding .1rem .6rem .1rem .1rem
        overflow hidden
        .button-wrapper
+         cursor: pointer
          float left
          width 33.3%
          .button
@@ -98,7 +99,9 @@ export default {
            border .02rem solid #ccc
            border-radius .06rem
     .item-list
+      background #fff
       .item
         line-height .76rem
         padding-left .2rem
+        cursor: pointer;
 </style>

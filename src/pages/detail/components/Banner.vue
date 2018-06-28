@@ -4,15 +4,22 @@
     <img class="banner-img" :src="bannerImg">
     <div class="banner-info">
       <div class="banner-title">{{this.sightName}}</div>
-      <div class="banner-number"><span class="iconfont banner-icon">&#xe626;</span>{{bannerImgs.length}}</div>
+      <div class="banner-number">
+        <span class="iconfont banner-icon">&#xe626;</span>
+        {{bannerImgs.length}}
+      </div>
     </div>
   </div>
-  <common-gallary :bannerImgs="bannerImgs" v-show="showGallary" @close="handleGallaryClick"></common-gallary>
+    <fade-animation>
+      <common-gallary :bannerImgs="bannerImgs" v-show="showGallary" @close="handleGallaryClick">
+      </common-gallary>
+    </fade-animation>
 </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'Banner',
   props: {
@@ -22,8 +29,7 @@ export default {
   },
   data () {
     return {
-      showGallary: false,
-      imgs: ['//img1.qunarzz.com/sight/p0/1503/b9/b9a4593c73228f9c.water.jpg_r_800x800_fa55893f.jpg', '//img1.qunarzz.com/sight/p0/1503/b9/b9a4593c73228f9c.water.jpg_r_800x800_fa55893f.jpg']
+      showGallary: false
     }
   },
   methods: {
@@ -35,7 +41,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
